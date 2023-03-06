@@ -32,7 +32,7 @@ function Guest(){
 }
 
 // Authorize User
-function User({ session }){
+function User({ session } : any){
   return(
     <main className="container mx-auto text-center py-20">
           <h3 className='text-4xl font-bold'>Authorize User Homepage</h3>
@@ -53,7 +53,7 @@ function User({ session }){
   )
 }
 
-export async function getServerSideProps({ req }) {
+export async function getServerSideProps({ req } : any) {
   const session = await getSession({ req })
   if(!session){
     return{
